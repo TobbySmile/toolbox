@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+
+# Cookies 和敏感配置
+config/cookies/
+*.cookies.txt
+
+/assets/ffmpeg/bin/ffmpeg.exe
+/assets/ffmpeg/bin/ffprobe.exe
+run_flet.vbs
+run_pyside6.vbs

@@ -1,0 +1,66 @@
+[project]
+name = "toolbox"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "fastapi>=0.141.1",
+    "ffmpeg-python>=0.2.0",
+    "flet>=0.86.5",
+    "flet-cli>=0.86.5",
+    "flet-desktop>=0.86.5",
+    "opencc-python-reimplemented>=0.1.7",
+    "pillow>=12.3.0",
+    "psutil>=7.2.2",
+    "pymupdf>=1.28.0",
+    "pyside6>=6.11.1",
+    "pytest>=9.1.1",
+    "python-multipart>=0.0.32",
+    "qrcode>=8.2",
+    "requests>=2.34.2",
+    "rich>=15.0.0",
+    "uvicorn>=0.52.1",
+    "yt-dlp>=2026.7.4",
+]
+
+[project.scripts]
+tb = "main:main"
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+py-modules = ["main"]
+packages = ["cli", "tools"]
+
+[dependency-groups]
+dev = [
+    "flet-cli==0.86.5",
+    "pyinstaller>=6.22.0",
+]
+
+[tool.flet]
+product = "万象阁"
+artifact = "万象阁"
+
+[tool.flet.app]
+path = "ui/flet_ui"
+module = "main.py"
+exclude = [
+    ".venv",
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "config",
+    "tests",
+    "toolbox.egg-info",
+    "pack_flet.py",
+    "万象阁.spec",
+]
+
+[tool.flet.windows]
+company = "万象阁"
+artifact = "万象阁"

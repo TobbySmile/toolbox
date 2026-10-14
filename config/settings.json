@@ -1,0 +1,11 @@
+{
+  "appearance": {
+    "theme_mode": "system"
+  },
+  "tree": {
+    "default_max_depth": null
+  },
+  "video": {
+    "mp4_compatibility": "standard"
+  }
+}
